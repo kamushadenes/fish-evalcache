@@ -24,7 +24,7 @@ function _evalcache
         source "$cacheFile"
     else
         if type "$argv[1]" >/dev/null
-            echo "$argv[1] initialization not cached, caching output of: $argv" 1>&2
+            #echo "$argv[1] initialization not cached, caching output of: $argv" 1>&2
             mkdir -p "$FISH_EVALCACHE_DIR"
             $argv >"$cacheFile"
             source "$cacheFile"
