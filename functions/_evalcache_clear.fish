@@ -4,9 +4,9 @@ function _evalcache_clear
     end
 
     if test (count $argv) -eq 0
-        /bin/rm -v "$FISH_EVALCACHE_DIR"/init-*.fish
+        command rm -v "$FISH_EVALCACHE_DIR"/init-*.fish
     else
         set -f cmd (basename $argv[1])
-        /bin/rm -v "$FISH_EVALCACHE_DIR/init-$cmd"-*.fish
+        command rm -v "$FISH_EVALCACHE_DIR/init-$cmd"-*.fish
     end
 end
